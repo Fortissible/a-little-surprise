@@ -147,8 +147,8 @@ h4 {
 
 .card .details {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: -10%;
+	left: 5%;
 	box-sizing: border-box;
 	padding: 0 0 0 10px;
 	z-index: -1;
@@ -190,4 +190,10 @@ h4 {
 
 .text-right {
 	text-align: right;
+}
+
+.float-mic{
+	position: absolute;
+	top: 75%;
+	left: 55%;
 }
