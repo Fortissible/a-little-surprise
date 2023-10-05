@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>HBD Sayang</title>
+</head>
+<body>
+    <div class="viewport" id="viewport" onclick="turnOnLight()">
+        <h1 class="text-after" style="color:#C0392B; visibility: hidden; position: absolute; top: 80%; left: 20%;">
+            Apaan tuh! coba dibuka bukunya
+        </h1>
+        <h1 class="text-center" style="margin-top:10rem">Kok gelap?</h1>
+        <h1 class="text-center">Coba nyalain lampunya donk!</h1>
+        <div class="card" id="card" style="visibility: hidden;">
+            <div class="imgBox">
+                <div class="bark"></div>
+                <img src="https://image.ibb.co/fYzTrb/lastofus.jpg">
+            </div>
+            <div class="details" onclick="detailsClick()">
+                <h4 class="color1">Tedy Ariansyah</h4>
+                <h4 class="color2">(HAPPY BIRTHDAY)</h4>
+                <p>Dear Honey,</p>
+                <p> I love you...</p>
+                <p>You're never around, you</p>
+                <p>hate the music I'm into, you</p>
+                <p>practically despise the movies I</p>
+                <p>like, and yet somehow you still</p>
+                <p>manage to be the best dad every year.</p>
+    
+                <p>How do you do that? :)</p>
+                <p class="text-right">Happy Birthday, papa!</p>
+                <p class="text-right">Henri</p>
+            </div>
+            <div class="details2" style="visibility: hidden;">
+                <h4 class="color1">Wekwow</h4>
+                <h4 class="color2">GGGGG</h4>
+                <p>Dear Honey,</p>
+                <p> I love you...</p>
+                <p>You're never around, you</p>
+                <p>hate the music I'm into, you</p>
+                <p>practically despise the movies I</p>
+                <p>like, and yet somehow you still</p>
+                <p>manage to be the best dad every year.</p>
+    
+                <p>How do you do that? :)</p>
+                <p class="text-right">Happy Birthday, papa!</p>
+                <p class="text-right">Henri</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        function detailsClick(){
+            console.log('details click')
+            document.getElementsByClassName('details')[0].classList.add('details-click')
+            document.getElementsByClassName('details')[0].classList.remove('details')
+            var dtl = document.getElementsByClassName('details-click')
+            for(var i = 0; i < dtl.length; i++){
+                dtl[i].style.visibility = 'hidden'
+            }
+            var dtl2 = document.getElementsByClassName('details2')
+            for(var i = 0; i < dtl.length; i++){
+                dtl2[i].style.visibility = 'visible'
+            }
+            // document.getElementsByClassName('details')[0].style.display = 'none'
+            // document.getElementsByClassName('details2')[0].style.display = 'block'
+        }
+
+        function turnOnLight(){
+            console.log('turn on light')
+            document.getElementById('viewport').style.backgroundColor = 'transparent'
+            document.getElementById('card').style.visibility = 'visible'
+            var initTxt = document.getElementsByClassName('text-center')
+            for(var i = 0; i < initTxt.length; i++){
+                initTxt[i].style.visibility = 'hidden'
+            }
+            document.getElementsByClassName('text-after')[0].style.visibility = 'visible'
+        }
+    </script>
+</body>
+</html>
